@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
 body {
@@ -51,9 +51,13 @@ body {
     transition: background 0.3s;
 }
 
-.btn:hover {
+.btn:hover:not([disabled]) {
     background: #2f6cdc;
     color: #cbd2da;
+}
+
+.btn:disabled {
+    cursor: default;
 }
 
 #next-btn {
@@ -72,4 +76,19 @@ body {
 #next-btn:hover {
     background: #cbd2da;
     color: #2f6cdc;
+}
+
+.correct {
+    background: #84e2aa;
+}
+
+.incorrect {
+    background: #ed6d6d;
+}
+
+#score {
+    font-size: 1.5rem;
+    color: #000;
+    margin-top: 20px;
+    font-weight: 600;
 }
